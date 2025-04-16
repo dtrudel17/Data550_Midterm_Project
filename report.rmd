@@ -1,0 +1,42 @@
+---
+title: "Modified Milk Formula (f75) and outcomes for Children with Severe Acute Malnutrition"
+output: html_document
+author: "Daniel Trudell, Wendy Lee, and Natalie Block"
+date: '`r format(Sys.time(), "%B %d, %Y")`'
+---
+
+```{r setup, include=FALSE} 
+knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
+```
+
+# Introduction
+This data is from a randomized trial testing whether a modified milk formula (f75) improves outcomes for children with severe acute malnutrition. Our analyses includes a table with demographic information, a graph with weight at different stages of the study, and a graph with mid-upper arm circumference (MUAC) at different stages of the study. MUAC is used as a tool to diagnose malnutrition in infants.
+
+
+# Table
+## Summary of Demographic Information
+```{r, table1, echo=FALSE}
+#load dataset
+here::i_am("report.rmd")
+table1<-readRDS(here::here("output/table1.rds"))
+
+table1
+```
+
+# Figures
+## Boxplot of MUAC by Treatment Group
+This box plot shows the average MUAC for each treatment group at three different time points in the study: MUAC is measured at baseline, MUAC1 is measured at stabilization, MUAC2 is measured at discharge/death/widthdraw.
+
+```{r, graph1, echo=FALSE}
+graph1<-readRDS(here::here("output/graph1.rds"))
+print(graph1, height=7, width=10)
+```
+
+## Boxplot of Weight by Treatment Group
+This box plot shows the average weight for each treatment group at three different time points in the study: weight is measured at baseline, weight1 is measured at stabilization, weight2 is measured at discharge/death/widthdraw.
+
+```{r, graph2, echo=FALSE}
+graph2<-readRDS(here::here("output/graph2.rds"))
+print(graph2, height=7, width=10)
+```
+```
