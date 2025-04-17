@@ -1,6 +1,10 @@
 report.html: report.Rmd output code/render_report.R output/cleandata.rds output/table1.rds output/graph1.rds output/graph2.rds
 	Rscript code/render_report.R
 	
+.PHONY: install
+install:
+	Rscript -e "renv::restore(prompt = FALSE)"
+
 output: 
 	mkdir output
 
