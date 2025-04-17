@@ -21,7 +21,7 @@ my_comparisons<-list(c("Modified F75", "Standard F75"))
 
 graph<-ggplot(data2, aes(y=value_weight,x=arm, fill=arm))+geom_boxplot()+
   stat_compare_means(comparisons=my_comparisons, method="t.test")+facet_wrap(~category_weight)+
-  labs(x="Treatment Group", y="Weight Measurement(kgs)", title="Weight by Treatment Group")
+  labs(x="Treatment Group", y="Weight Measurement(kg)", title="Weight by Treatment Group")
 
 saveRDS(graph, file=here::here("output/graph2.rds"))
 
