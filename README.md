@@ -37,7 +37,12 @@ Data550 Midterm Project
   2. Using the terminal, `cd` into the directory that you want the project to be copied into
   3. run `git clone https://github.com/<username>/<forked_repo>` to copy the repo from Github to your local computer
   
-### Make
-  4. Run `make report.html` in the terminal while in the project directory to generate the complete report
-  5. Run `make clean` to remove contents of the output folder and `report.html`
+### To Generate The Test Report
+  4. Run `export WHICH_CONFIG="test"` in the terminal while in the project directory 
+  5. Run `make report.html` to generate the complete report
+  6. Run `make clean` to remove contents of the output folder and `report.html`
 
+### To Generate The Final Report
+  4. Run `export WHICH_CONFIG="default"` if you would like to view the final report with no code
+  5. Run `make report.html` in the terminal while in the project directory to generate the complete report
+  6. Run `make clean` to remove contents of the output folder and `report.html`
