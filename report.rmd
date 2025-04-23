@@ -8,7 +8,7 @@ params:
 ---
 
 ```{r, setup, include=FALSE} 
-knitr::opts_chunk$set(echo = params$print)
+knitr::opts_chunk$set(echo = params$print, message=FALSE, warning=FALSE)
 
 ```
 
