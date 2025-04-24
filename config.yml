@@ -1,0 +1,5 @@
+default:
+  print: FALSE
+
+test:
+  print: TRUE
