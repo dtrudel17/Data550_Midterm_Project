@@ -3,6 +3,7 @@ report.html: report.Rmd output code/render_report.R output/cleandata.rds output/
 	
 .PHONY: install
 install:
+	Rscript -e "renv::activate()"
 	Rscript -e "renv::restore(prompt = FALSE)"
 
 output: 
